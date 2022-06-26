@@ -1,0 +1,137 @@
+:root {
+  --background: rgb(36, 35, 35);
+  --main: #e6007e;
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", "Poppins", sans-serif;
+  }
+
+  body {
+    overflow: hidden;
+  }
+
+  .container {
+    display: flex;
+    height: 100vh;
+
+    h1 {
+      color: #fff;
+      font-size: 2.5rem;
+    }
+
+    .picture {
+      flex: 2;
+      background-image: url(./images/efe-kurnaz-RnCPiXixooY-unsplash.jpg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+
+      .logo {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        position: relative;
+        align-items: center;
+        height: auto;
+        top: 30vh;
+        padding: 25px 0;
+        background-color: rgba(0, 0, 0, 0.5);
+
+        img {
+          height: 15vh;
+        }
+      }
+
+      .footer {
+        color: white;
+        font-size: 0.7rem;
+        text-align: center;
+        vertical-align: bottom;
+        letter-spacing: 1px;
+      }
+    }
+
+    .login-side {
+      flex: 3;
+      background: var(--background);
+      color: #fff;
+
+      .already-user {
+        a {
+          text-decoration: none;
+          color: var(--main);
+
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 10vh;
+        padding: 0 10px 0 20px;
+
+        .info {
+          font-size: 1.3rem;
+          line-height: 2rem;
+        }
+
+        .login-container {
+          margin: 1rem 0;
+          width: 80%;
+          padding: 10px;
+          box-shadow: 1px 2px 5px 3px rgba(0, 0.5, 0.5, 1);
+        }
+
+        form {
+          display: flex;
+          flex-wrap: wrap;
+          padding-top: 10px;
+
+          label {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+
+            input {
+              border-radius: 5px;
+              border: 0;
+              padding: 8px;
+              margin: 10px 10px 10px 0;
+
+              &:focus {
+                outline: 3px solid var(--main);
+              }
+            }
+          }
+
+          .create-btn {
+            padding: 10px 25px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border: 5px solid var(--main);
+            font-size: 1.4rem;
+            font-weight: 700;
+            background: var(--background);
+            color: var(--main);
+
+            &:hover {
+              cursor: pointer;
+              background: var(--main);
+              color: var(--background);
+            }
+          }
+        }
+      }
+    }
+  }
+}
