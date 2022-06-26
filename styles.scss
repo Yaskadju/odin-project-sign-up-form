@@ -29,6 +29,7 @@
       background-size: cover;
       background-repeat: no-repeat;
       width: 100%;
+      position: relative;
 
       .logo {
         display: flex;
@@ -46,12 +47,22 @@
         }
       }
 
-      .footer {
-        color: white;
-        font-size: 0.7rem;
+      .author {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 0.5rem;
         text-align: center;
         vertical-align: bottom;
-        letter-spacing: 1px;
+        letter-spacing: 0.5px;
+        position: absolute;
+        padding-top: 10px;
+        bottom: 10px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        a {
+          text-decoration: none;
+          color: rgba(255, 255, 255, 0.6);
+        }
       }
     }
 
