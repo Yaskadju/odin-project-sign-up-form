@@ -137,7 +137,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 50%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 :root .container .login-side .content form label input {
@@ -166,5 +168,31 @@
   cursor: pointer;
   background: var(--main);
   color: var(--background);
+}
+
+@media only screen and (max-width: 650px) {
+  :root .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    height: auto;
+    text-align: center;
+  }
+  :root .container .picture {
+    background-position: bottom;
+    background-size: 100vw;
+    height: 15vh;
+  }
+  :root .container .picture .logo {
+    width: 100%;
+    position: static;
+  }
+  :root .container form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
